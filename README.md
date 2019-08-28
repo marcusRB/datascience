@@ -1,2 +1,2 @@
 # datascience
-repo dataset from competitions
+repo about data science and data analytics area
