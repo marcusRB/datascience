@@ -1,0 +1,144 @@
+---
+title: "DSA Awards 2019 - Transformando el mundo del baloncesto en España - Liga ACB -"
+author: "Marco Russo"
+Date : "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_document:
+    fig_caption: yes
+    code_folding: show
+    includes:
+      in_header: header.html
+    number_sections: yes
+    smart: no
+    theme: spacelab
+    toc: yes
+    toc_float: yes
+    css: style.css
+  pdf_document:
+    highlight: zenburn
+    toc: yes
+  word_document: default
+editor_options: 
+  chunk_output_type: inline
+code_folding: show
+
+---
+
+
+# Descripción del caso
+
+
+# Configuración básica
+
+Los primeros pasos de una configuración básica son instalación de paquetes y carga de librería tanto para la exploración de los datos como las específicas de algoritmos.
+
+## Paquetes - Librerías
+
+```{r}
+
+library(readxl)
+```
+
+
+## Observación si existen hojas internas de los ficheros excel
+
+Para poder realizar correctamente la carga de los ficheros en formato excel, nos aseguramos que no existan otras hojas a cargar y contemplar durante la fase de guardar dataset.
+
+```{r}
+# Con la función excel_sheets observaremos si existen más de una hoja
+excel_sheets("datasets/ACB_Players_18-19.xlsx")
+excel_sheets("datasets/ACB_Teams_18-19.xlsx")
+excel_sheets("datasets/ACB_Players_2012to2018.xlsx")
+```
+
+Perfecto!, no existen más que una hoja por fichero excel.
+
+## Carga de los datasets
+
+```{r}
+# Efectuaremos la carga de los 3 dataset
+ACB_Players_18_19 <- read_excel("datasets/ACB_Players_18-19.xlsx")
+ACB_Teams_18_19 <- read_excel("datasets/ACB_Teams_18-19.xlsx")
+ACB_Players_2012to2018 <- read_excel("datasets/ACB_Players_2012to2018.xlsx", )
+```
+
+
+### Estructura de los datasets
+
+Rápidamente visualizaremos la estructura de los 3 datasets y observaciones / variables en cada uno de ellos.
+
+```{r}
+# Visualizaremos la estructura del dataset ACB_player_18_19
+str(ACB_Players_18_19)
+dim(ACB_Players_18_19)
+```
+
+Contabilizamos 276 observaciones por 47 variables diferentes.
+Se observan variables numéricas y categorías, de la cuáles la posición del jugador, variable **Position** será nuestro factor
+
+```{r}
+# Observaremos la estructura del dataset Team
+str(ACB_Teams_18_19)
+dim(ACB_Teams_18_19)
+```
+
+Está compuesto de 18 observaciones y 40 variables, la mayoría de ellas numéricas.
+
+```{r}
+# Nuevamente miraremos los estadísticos de los jugadores desde 2012 a 2018
+str(ACB_Players_2012to2018)
+dim(ACB_Players_2012to2018)
+```
+
+El tercer dataset se consta de 1815 observaciones y 46 variables, al igual que el anterior necesitamos factorizar la variable posición **Position**.
+
+
+```{r}
+# Observación de los primeros resultados de los tres datasets
+head(ACB_Players_18_19, n=100)
+head(ACB_Teams_18_19, n=20)
+head(ACB_Players_2012to2018, n=100)
+```
+
+
+Desde los tres dataset limpiamos la primera columna correspondiente a la numeración de filas.
+
+# Data Cleaning
+
+Durante la fase de limpieza nos centraremos en la observación de valores que podrían distorsionar nuestros análisis
+
+## Eliminar variables
+
+```{r}
+# Utilizamos la técnica de selección de todas las observaciones y solo incluyendo desde la 2 columna hasta la última
+ACB_Players_18_19 <- ACB_Players_18_19[,2:47]
+ACB_Teams_18_19 <- ACB_Teams_18_19[,2:40]
+ACB_Players_2012to2018 <- ACB_Players_2012to2018[,2:46]
+```
+
+
+## Detectar valores nulos
+
+Observaremos con las funciones is.na, is.null, is.nan si existen valores a tratar
+```{r}
+# Utilizamos las tres funciones al primer dataset
+table(is.null(ACB_Players_18_19))
+table(is.na(ACB_Players_18_19))
+```
+
+
+```{r}
+# Utilizamos las tres funciones al segundo dataset
+table(is.null(ACB_Teams_18_19))
+table(is.na(ACB_Teams_18_19))
+```
+
+
+
+```{r}
+# Utilizamos las tres funciones al segundo dataset
+table(is.null(ACB_Players_2012to2018))
+table(is.na(ACB_Players_2012to2018))
+```
+
+
