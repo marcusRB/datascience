@@ -1,4 +1,7 @@
-# DSA2019 - Sport Analytics - Liga ACB
+# DSA2019 - GO MOVING - Sport Analytics Liga ACB
+autor: Marco Russo
+date: %datetime
+
 
 ## Transformando el mundo del baloncesto a través de Sports Analytics en España
 
