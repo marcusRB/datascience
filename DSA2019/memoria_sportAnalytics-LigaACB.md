@@ -1,7 +1,27 @@
 # DSA2019 - GO MOVING - Sport Analytics Liga ACB
 autor: Marco Russo
-date: %datetime
+contact: mrusso@paradigmadigital.com
+date: septiembre 2019
 
+
+## Biography
+
+Hola a todos, mi nombre es Marco Russo y para mí es un placer participar a este reto. De primera parto con bastante retraso por un imprevisto.
+
+Sobre mí, tengo formación en ciencias económicas con especialización en finanza de mercado de valores y banca, sucesivamente he estudiado marketing, marketing digital , analítica de datos y finalmente con la UOC el posgrado de Business Analytics, además de formación en analítica de datos y aprendizaje automático.
+
+Trabajo como consultor de datos y BI en Paradigma Digital en Madrid, empresa asociada con Indra en diferentes proyectos de transformación digital y área de Big Data (principalmente minería de datos y visualización). También soy formador in-company y apoyo en la formación de otros empleados en visualización de datos (las herramientas que utilizamos entre otras, Data Studio, Tableau, PowerBI principalmente), y nuestros clientes son casi la mayoría del Ibex35. A nivel interno trabajo en proyectos de apoyo al área de finanza y RRHH (business intelligence).
+
+Por último desde hace 7 años he colaborado como docente impartiendo programas de comercio electrónico, marketing digital y datos en la Cámara de Comercio y otras escuelas de negocios como profesor de analítica principalmente. Cómo último profesor colaborador en la UOC en la asignatura de Data Mining y en NEOLAND como profesor principal del Máster de Data Science.
+
+Me hace más ilusión el poder compartir estos retos a mis estudiantes a que yo lo envie, porque la verdad, me ha faltado tiempo.
+
+Que gane el mejor!
+
+gracias, un saludo
+[marcusRB](www.marcusrb.com)
+
+***
 
 ## Transformando el mundo del baloncesto a través de Sports Analytics en España
 
@@ -149,4 +169,72 @@ PER: An efficiency statistic created by John Hollinger. [Click here for more inf
 
 
 
-##
+## Entrega del reto
+
+La entrega del reto deberá contar con los siguientes documentos entregables:
+
+Memoria del proyecto: Ésta se presentará en formato PDF y no podrá superar las 30 páginas. La fuente empleada en el contenido será Arial Narrow de tamaño 12pt con un interlineado sencillo. Dicha memoria estará dividida en los siguientes apartados:
+Portada con título e identificación del concursante.
+Metodología y planificación.
+Descripción de los datos y procesamiento de los mismos.
+Explicación justificada del diseño e implementación de la infraestructura y componentes/servicios usados.
+Explicación justificada de la parte analítica (con validación analítica incluida).
+Explicación justificada del Backend implementado (en caso de disponer).
+Explicación justificada del Frontend implementado (en caso de disponer).
+Demostración mediante ejemplos (casos de uso). Si fuera posible, enviar link a la aplicación interactiva implementada.
+Ficheros que documenten el proyecto: código fuente, fuentes de datos, ...
+Fichero descripción.txt que enumere y describa cada uno de los ficheros presentados (obligatorio).
+Todos estos ficheros anteriormente descritos deberán ser almacenados (con directorios o no) en un fichero comprimido .zip, con el nombre que se desee. El fichero .zip no deberá ocupar más de 200MB, ya que el sistema no permite ficheros de tamaño superior.
+
+
+***
+
+
+# Resumen del trabajo
+
+En mi opinión, el baloncesto es un deporte maravilloso, se puede decir mucho sobre una persona por la forma en que jugaba baloncesto, cosas como cogió la pelota? ¿Presumió en la cancha? ¿La persona tenía miedo de tirar y fallar? ¿La persona mintió acerca de haber recibido una falta? Además de eso, ¡es divertido jugar y hacer un gran ejercicio!
+
+También en mi opinión, Data Analytics / Data Science es un campo increíblemente popular y en crecimiento, tanto es así que fue nombrado "el trabajo más sexy del siglo XXI". La ciencia de datos es una mezcla de estadísticas, análisis de datos, aprendizaje automático, informática y conocimiento de los datos / negocios que tiene como objetivo proporcionar información y comprensión de los datos.
+
+Históricamente, la recogida de datos y el análisis de datos en los diferentes deportes se centra en estadísticas acumuladas anuales para comparar el desempeño de los diferentes jugadores, tanto que la liga amricana NBA ahora ejecuta un Hackathon anual, lo que les permite obtener nuevas ideas geniales y encontrar nuevos analistas de datos con talento.
+
+Con el gran avance que se ha producido en la recogida y procesamiento de datos, existe la posibilidad de realizar análisis más avanzados. Serán análisis que nos permitan ponderar y realizar una clasificación, aplicando los conceptos del learning to rank, de los jugadores en función de aspectos que puedan ser influyentes a la hora de comparar su desempeño.
+
+La hipótesis en que se basa este estudio sobre el baloncesto, en particular aplicado a la LIGA ACB es que hay dos factores interrelacionados que influyen en el desempeño y que no suelen tomarse en consideración.
+El *primero*, es el conocimiento del juego que permite a un jugador aplicar la estrategia correcta según se plantee un problema en forma de defensa adversaria.
+El *segundo* es la importancia del partido, ya que varía mucho según el momento de la temporada sea. Tomando como ejemplo en la NBA no existen descensos de categoría, la temporada regular es muy larga y en los playoffs las franquicias se juegan el trabajo de todo el año.
+
+El objetivo de este estudio es conseguir un __análisis estadístico__ que tenga en cuenta ambos factores para poder comparar los puntos fuertes y débiles de los jugadores. El resultado del estudio aportará información que permita a los entrenadores y directores deportivos realizar una rápida toma de decisiones en un mercado de fichajes muy cambiante.
+
+
+## Estructura del trabajo
+
+Al disponer solo de pocos días a la semana para dedicar a este proyecto, es comenzado con una pequeña exploración de los datos proporcionados y tener un poco más la libertad de ver que hay más allá de estos dataset que se podemos concluir. Finalmente he visto muchos más trabajos y avanzados en este sentido, en la liga _NBA_ y la universitaria _NCAA_. De hecho hay sub-proyectos muy interesantes a la hora de poder abordar un __PoC__ con un equipo de baloncesto de la liga española.
+
+
+Enumeraré los sub-proyectos que he ido enumerando que he estado desarrollando (y estaré trabajando con mis alumnos del próximo curso):
+
+- **Data weareble**: Utilizar los datos biométricos a la hora de detectar con antelación los posibles cambios durante el partido. Se ha comprobado el mismo a través de la aplicación conocida en este mundo del deporte (y que se utiliza bastante en Movistar Cycling), **STRAVA**, además de utilizar los variables propias del jugador y así crear un nueva métrica con el fin de obtener: _%potencia_, _%cansancio_, _%lucidez_, _%lesiones_, _%respiración_, _%pulsaciones_, _%impacto_, _%estado_estrés_, etc. Además viendo muchos videojuegos utilizan exactamente un algoritmo muy similar. Aquí la noticia [NBA and RDF](https://www.zdnet.com/article/nba-analytics-and-rdf-graphs-game-data-and-metadata-evolution-and-occams-razor/)
+
+Acompañando este primer sub-proyecto, hablaré del __Perfomance_Analysis__ que obviamente al faltar los primeros datos que creo sean muy útiles para determinar la métrica que hasta ahora se calcula de una manera, __PER__, el control de datos biométricos muy importantes para tomar decisiones basadados en tiempo real de dispositvos visto anteriormente, el atleta tendrá en todo momento incluso alertas de cuando está llegado a su límite de fuerzas.
+
+- **Deep Learning aplicado a los tiros**: Otro sub-proyecto a realizar y ya estudiando en la _NCAA_ es la capacidad de estudiar a través de técnicas de deep-learning y redes neuronales a estudiar y ser capaz de detectar a una distancia x con otros factores si el equipo va a canasta o no. El artículo que hace mención a esto es en [FiveThirtyEight](https://fivethirtyeight.com/features/how-mapping-shots-in-the-nba-changed-it-forever/).
+
+- **Track de Movimientos**: Una de las cosas más interesantes es un estudio desde 2009 de grabacione de partidos, que están aprovenchando con __Tensorflow__, __Keras__, __PyTorch__, para analizar cada uno de ellos y detectar patrones. Aquí el extracto :
+
+> _En 2009, la liga comenzó a utilizar un sistema de video de última generación para rastrear el movimiento de los jugadores en la cancha y la pelota. Tener este nuevo sistema de video le permitió a la NBA recopilar nuevos datos, lo que a su vez permitió a los científicos de datos utilizar el aprendizaje automático y la cartografía (la ciencia o la práctica de dibujar mapas) para evaluar mejor qué jugadores ayudaron a su equipo a ganar_.
+
+- **Rediseñando el equipo** : Será que la NBA es otro nivel que sin duda ni se acerca a cualquier europea (hasta incluso pienso que ni la NCAA), pero sin embargo algo se mueve en la dirección correcta y hay físicos, científicos, matemáticos, analistas, estadísticos tan buenos como en EEUU, así mejor aprovecharlo al máximo. Lo que se estudio lo que muestro a continuación es algo muy amplio y basado en un _método de clasificación_. [Estudio completo](http://www.sloansportsconference.com/wp-content/uploads/2012/03/Alagappan-Muthu-EOSMarch2012PPT.pdf?utm_source=twitter&utm_medium=socialmedia&utm_campaign=wiredplaybookclickthru)
+
+> ¿Se ha preguntado por qué solo hay 5 posiciones en el baloncesto o cómo se determina la posición de un jugador? Nosotros también. Pero ahora, utilizando el motor de análisis de datos patentado de Ayasdi y décadas de investigación de topología computacional en Stanford, hemos categorizado matemáticamente a los jugadores en 13 nuevas posiciones: las posiciones reales del baloncesto (que se presentará en esta presentación). Describiré esta visión revolucionaria y cómo puede agregar un gran valor para los entrenadores, propietarios, gerentes generales y fanáticos de todos los días. Al visualizar la forma de los datos en términos de posiciones basadas en el rendimiento, podemos descubrir jugadores infravalorados, administrar decisiones en el juego, optimizar listas y redactar de manera más inteligente. Y esta mayor granularidad en las posiciones de baloncesto es solo el comienzo. También describiré cómo el análisis de datos topológicos puede abrir el camino a más evoluciones en los pensamientos en el baloncesto y otros deportes.
+
+
+## Métricas
+
+Aquí unas cuantas métricas recogidas, separadas por:
+
+* Moneyball
+* Player Evaluation Metrics
+* Team Evaluation Metrics
+
+cada una están indicadas y especificadas en [nbastuffer](https://www.nbastuffer.com/analytics-101/)
